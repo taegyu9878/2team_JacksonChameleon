@@ -1,0 +1,38 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+
+
+const menus = [
+    { key: "Shop", label: "SHOP" },
+    { key: "Collections", label: "COLLECTIONS" },
+    { key: "Service", label: "SERVICE" },
+    { key: "About", label: "ABOUT" },
+    { key: "Community", label: "COMMUNITY" }
+]
+
+const Header = () => {
+    return (
+        <header>
+            <div className="inner">
+                <div className="header-left">
+                    <ul className="main-menu">
+                        {menus.map((menu, id) => (
+                            <li key={id}> <Link to={`/${menu.key}`}> {menu.label}</Link></li>
+                        ))}
+                    </ul>
+                    <h1 className="logo"><Link to="/"><img src="./images/logo.png" alt="" /> </Link></h1>
+                </div>
+                <div className="header-right">
+                    <ul className="gnb-list">
+                        <li><Link to="/Search"><img src="./images/search-icon.png" alt="" /></Link></li>
+                        <li><Link to="/User"><img src="./images/user-icon.png" alt="" /></Link></li>
+                        <li><Link to="/ShoppingBag"><img src="./images/shopping-bag-icon.png" alt="" /></Link></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    )
+}
+
+export default Header

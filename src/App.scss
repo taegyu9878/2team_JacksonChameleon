@@ -1,0 +1,53 @@
+@mixin myFlex ($gap: 10px, $jc: space-between, $ai: center) {
+    display: flex;
+    gap: $gap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+header{
+    background: rgba($color: #ffffff, $alpha: 0.5);
+    height: 7rem;
+    align-items: center;
+    // justify-content: 
+}
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include myFlex();
+    height: inherit;
+
+    .header-left {
+        @include myFlex($gap: 60px);
+
+        .main-menu {
+            @include myFlex($gap: 20px);
+            font-size: 1.4rem;
+            .logo{
+                img{
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .header-right {
+
+        .gnb-list {
+            @include myFlex($gap: 20px);
+        }
+    }
+}
+
+main{
+    height: 10rem;
+    font-size: 2rem;
+}
+
+// footer
+footer{
+    background-color: #222;
+    color: #fff;
+    height: 10rem;
+    font-size: 2rem;
+}
