@@ -31,18 +31,21 @@
     display: flex;
     justify-content: space-between;
     gap: 40px; 
+    
 
     .show-room,
     .customer-center {
       display: flex;
       flex-direction: column;
       gap: 16px;
+     
 
       .room-text,
       .customer-text {
         display: flex;
         flex-direction: column; 
-         line-height: 1.4;
+         line-height: 1;
+          
         .day{
           font-size: 12px;
         }
@@ -61,7 +64,7 @@
         .call {
           font-weight: 600;
           font-size: 18px;
-          line-height: 1.4;
+          line-height: 1;
         }
       }
     }

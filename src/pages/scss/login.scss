@@ -1,0 +1,28 @@
+@use "../../App.scss" as g;
+
+.login-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+
+  .section-title {
+    text-align: center;
+  }
+
+  form {
+    // @include g.myFlex();
+    @include g.myFlex();
+    flex-direction: column;
+
+    input{
+      display: block;
+      width: 100%;
+      line-height: 50px;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+
+
+}
