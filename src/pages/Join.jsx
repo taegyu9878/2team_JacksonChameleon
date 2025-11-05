@@ -22,10 +22,9 @@ const Join = () => {
 
   // input값 변경 시
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const {name,value}=e.target;
+
+    setFormData({...formData,[name]:value});
   };
 
   // 주소 검색 버튼 클릭 시
