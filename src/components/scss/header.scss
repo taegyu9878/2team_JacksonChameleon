@@ -1,0 +1,41 @@
+@use "../../App.scss" as g;
+.wide-inner {
+    margin: 0 2%;
+}
+
+header {
+    background: rgba($color: #ffffff, $alpha: 0.5);
+    height: 7rem;
+    align-items: center;
+    // justify-content: 
+
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include g.myFlex();
+    // height: 7rem;
+
+    .header-left {
+        @include g.myFlex($gap: 60px);
+
+        .main-menu {
+            @include g.myFlex($gap: 20px);
+            font-size: 1.4rem;
+
+            .logo {
+                img {
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .header-right {
+
+        .gnb-list {
+            @include g.myFlex($gap: 20px);
+        }
+    }
+}
+}

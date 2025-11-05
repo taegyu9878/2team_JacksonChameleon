@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./scss/header.scss"
 
 
 
@@ -26,7 +27,7 @@ const Header = () => {
                 <div className="header-right">
                     <ul className="gnb-list">
                         <li><Link to="/Search"><img src="./images/search-icon.png" alt="" /></Link></li>
-                        <li><Link to="/User"><img src="./images/user-icon.png" alt="" /></Link></li>
+                        <li><Link to="/Login"><img src="./images/user-icon.png" alt="" /></Link></li>
                         <li><Link to="/ShoppingBag"><img src="./images/shopping-bag-icon.png" alt="" /></Link></li>
                     </ul>
                 </div>
