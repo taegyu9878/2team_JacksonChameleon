@@ -21,6 +21,15 @@ footer{
     .footer-left {
       .logo {
         width:300px;
+    gap: 40px; 
+    
+
+    .show-room,
+    .customer-center {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+     
 
         img{
           width:100%;
@@ -29,11 +38,19 @@ footer{
       
       .icon-wrap {
         display: flex;
+
         margin-top: 24px;
         gap: 30px;
 
         img {
           cursor: pointer;
+
+        flex-direction: column; 
+         line-height: 1;
+          
+        .day{
+          font-size: 12px;
+
         }
       }
 
@@ -69,6 +86,8 @@ footer{
 
         .day {
           font-size: 12px;
+          line-height: 1;
+
         }
       }
     }

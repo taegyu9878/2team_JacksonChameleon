@@ -1,0 +1,49 @@
+@use "../../App.scss" as g;
+
+.login-wrap {
+    max-width: 1200px;
+    background-color: palegoldenrod;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+    .right-login{
+      width:360px;
+      height: 434px;
+
+    .section-title {
+        text-align: center;
+        @include g.myTitle24();
+        margin-bottom: 32px;
+    }
+
+    form {
+        @include g.myFlex($gap:10px);
+        flex-direction: column;
+
+        input {
+            display: block;
+            width: 360px;
+            height: 48px;
+            padding:12px 24px;
+            align-items: center;
+            gap:10px;
+
+        }
+        button{
+            width: 360px;
+            height: 48px;
+        }
+
+        .log-text{
+          display: flex;
+        }
+        .log-web{
+          text-align: center;
+          gap: 12px;
+        }
+    }
+    }
+
+}

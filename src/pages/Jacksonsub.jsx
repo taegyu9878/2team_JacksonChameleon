@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import jacksonProduct from "../data/jacksonproduct";
+import jacksonProduct from "../data/jacksonproduct.js";
 
 const Jacksonsub = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
