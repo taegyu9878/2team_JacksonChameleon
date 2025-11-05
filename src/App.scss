@@ -13,37 +13,39 @@ $BG: #f4f4f4;
 $point: #008180;
 $point2: #d0071b;
 
+
+
 //타이틀
-@mixin myTitle32 () {
+@mixin myTitle32 ($t_a:center, $color:$text1) {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 140%;
-    text-align: center;
-    color: $text1;
+    text-align: $t_a;
+    color: $color;
 }
 
-@mixin myTitle24 () {
+@mixin myTitle24 ($t_a:center, $color:$text1) {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 140%;
-    text-align: center;
-    color: $text1;
+    text-align: $t_a;
+    color: $color;
 }
 
-@mixin myTitle16 () {
+@mixin myTitle16 ($t_a:center, $color:$text1) {
     font-size: 16px;
     font-weight: 400;
     line-height: 140%;
-    text-align: center;
-    color: $text1;
+    text-align: $t_a;
+    color: $color;
 }
 
-@mixin myTitle14 () {
+@mixin myTitle14 ($t_a:center, $color:$text1) {
     font-size: 14px;
     font-weight: 400;
     line-height: 140%;
-    text-align: center;
-    color: $text1;
+    text-align: $t_a;
+    color: $color;
 }
 
 //
@@ -54,4 +56,8 @@ $point2: #d0071b;
     align-items: $ai;
 }
 
+.inner{
+    max-width:1200px;
+    margin:0 auto;
+}
 
