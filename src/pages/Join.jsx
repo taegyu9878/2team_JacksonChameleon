@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import DaumPostcode from "react-daum-postcode";
-import "./scss/post.scss"
+import { useLogJoinStore } from "../store/LogJoinStore";
+import "./scss/post.scss";
 
 const Join = () => {
+  const { toggleForm } = useLogJoinStore(); // ✅ Zustand 상태 불러오기
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -13,23 +16,23 @@ const Join = () => {
 
   const [isPostOpen, setIsPostOpen] = useState(false); // 주소창 열림 여부
 
-    // 회원가입 제출 시
+  // 회원가입 제출 시
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("회원가입 데이터:", formData);
     alert("회원가입 완료!");
+    toggleForm(); // ✅ 회원가입 후 로그인 폼으로 전환
   };
 
   // input값 변경 시
   const handleChange = (e) => {
-    const {name,value}=e.target;
-
-    setFormData({...formData,[name]:value});
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   // 주소 검색 버튼 클릭 시
   const handleAddressSearch = (e) => {
-    e.preventDefault(); // 폼 제출 방지
+    e.preventDefault();
     setIsPostOpen(true);
   };
 
@@ -47,15 +50,9 @@ const Join = () => {
       fullAddress += extraAddress ? ` (${extraAddress})` : "";
     }
 
-    setFormData({
-      ...formData,
-      address: fullAddress,
-    });
-
-    setIsPostOpen(false); // 창 닫기
+    setFormData({ ...formData, address: fullAddress });
+    setIsPostOpen(false);
   };
-
-
 
   return (
     <div className="sub-page">
@@ -97,7 +94,7 @@ const Join = () => {
                 placeholder="주소"
                 value={formData.address}
                 onChange={handleChange}
-                readOnly // 직접 입력 막기
+                readOnly
               />
               <button onClick={handleAddressSearch}>주소찾기</button>
             </div>
@@ -113,6 +110,14 @@ const Join = () => {
 
             <button type="submit">회원가입</button>
           </form>
+
+          {/* ✅ 로그인으로 돌아가기 버튼 */}
+          <div className="log-text">
+            <p>이미 계정이 있으신가요?</p>
+            <button type="button" onClick={toggleForm}>
+              로그인으로 돌아가기
+            </button>
+          </div>
         </div>
       </div>
 

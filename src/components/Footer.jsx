@@ -1,5 +1,6 @@
 import React from 'react'
 import "./scss/footer.scss"
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -25,7 +26,7 @@ const Footer = () => {
                 <span><strong>판교점</strong> 경기 성남시 분당구 판교역로 146번길 20</span>
                 <span><strong>무브먼트랩</strong> 전국 지점</span>
               </div>
-            <p className='room-btn'>매장 안내 바로가기</p>
+            <p className='room-btn'><Link to ="/map">매장 안내 바로가기</Link></p>
             </div>
            
 
@@ -37,7 +38,7 @@ const Footer = () => {
                 <span>평일 10:00 - 18:00 (점심시간 12:00 - 13:00)</span>
                 <span className='day'>(*주말, 공휴일 휴무)</span>
               </div>
-              <p className='online-btn'>온라인 문의 바로가기</p>
+              <p className='online-btn'><Link to ="/cs">온라인 문의 바로가기</Link></p>
             </div>
 
           </div>
